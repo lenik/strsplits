@@ -1,0 +1,46 @@
+# Build artifacts
+/.cache/
+/build/
+builddir/
+*.o
+*.a
+*.so
+*.so.*
+
+# Compiled binaries
+/strsplit
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*~
+
+# Debian build files
+*.deb
+*.build
+*.changes
+*.dsc
+*.tar.gz
+*.tar.xz
+debian/files
+debian/*.substvars
+debian/*-stamp
+debian/.debhelper
+debian/*.debhelper.log
+debian/.debhelper/
+debian/strsplit/
+
+# Meson files
+meson-private/
+meson-info/
+meson-logs/

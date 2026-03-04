@@ -1,0 +1,37 @@
+# bash-completion for strsplit
+# Copyright (C) 2026 Lenik <strsplit@bodz.net>
+# Licensed under GPL-3+
+
+_strsplit() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="-d -n -0 -z -c -N -i -r -f -s -g -H -D -V --version --help --delim --linenum \
+--0-based --reset --format --insert-nl --indented --reversed --ignore-case \
+--numeric-sort --general-numeric-sort --human-numeric-sort --dictionary-sort \
+--version-sort"
+
+    case "${prev}" in
+        -d|--delim)
+            COMPREPLY=()
+            return 0
+            ;;
+        -c|--format)
+            COMPREPLY=()
+            return 0
+            ;;
+        *)
+            ;;
+    esac
+
+    if [[ "${cur}" == -* ]]; then
+        COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
+        return 0
+    else
+        COMPREPLY=( $(compgen -f -- "${cur}") )
+        return 0
+    fi
+}
+
+complete -F _strsplit strsplit

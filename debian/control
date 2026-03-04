@@ -1,0 +1,23 @@
+Source: strsplit
+Section: utils
+Priority: optional
+Maintainer: Lenik <strsplit@bodz.net>
+Build-Depends: debhelper-compat (= 13), meson, ninja-build
+Standards-Version: 4.6.0
+Homepage: https://github.com/lenik/strsplit
+Rules-Requires-Root: no
+
+Package: strsplit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: split input strings by delimiter and print each item on separate line
+ strsplit is a command-line utility that splits input strings by a delimiter
+ (default: whitespace) and prints each item on a separate line.
+ .
+ Features:
+  - Custom delimiter regex support
+  - Line numbering with configurable base and reset
+  - Multiple sorting modes (numeric, version, human-numeric, etc.)
+  - Custom output formatting
+  - Indentation and run separation options
+  - Both stdin and command-line argument input modes

@@ -1,0 +1,16 @@
+strsplit (1.0.0) testing; urgency=medium
+
+  * Initial release
+  * Split input strings by delimiter and print each item on separate line
+  * Features:
+    - Custom delimiter regex support (POSIX ERE)
+    - Line numbering with configurable base and reset
+    - Multiple sorting modes (numeric, version, human-numeric, dictionary, etc.)
+    - Custom output formatting with printf-style format strings
+    - Indentation and run separation options
+    - Both stdin and command-line argument input modes
+    - Bash completion support
+    - Man page documentation
+    - Debian packaging (native format)
+ 
+ -- Lenik (谢继雷) <lenik@bodz.net>  Wed, 04 Mar 2026 00:00:00 +0000
